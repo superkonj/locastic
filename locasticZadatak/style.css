@@ -1,0 +1,180 @@
+a:link {
+  color: white;
+  text-decoration: none;
+  margin-right: 25px;
+}
+a:visited {
+  color: white;
+}
+body {
+  background-color: grey;
+  margin-top: 0px;
+}
+.nav-bar {
+  width: 50%;
+  height: 75px;
+  background-color: #00a1d1;
+  margin: auto;
+  padding-left: 2%;
+  padding-top: 1%;
+  padding-right: 2%;
+}
+.logo-livo {
+  float: left;
+}
+.linkovi-desno {
+  float: right;
+  font-family: Roboto-Regular;
+  font-size: 22px;
+  color: #ffffff;
+  letter-spacing: 0px;
+}
+.mySlides {
+  display: none;
+}
+.w3-left,
+.w3-right,
+.w3-badge {
+  cursor: pointer;
+}
+.w3-badge {
+  height: 13px;
+  width: 13px;
+  padding: 0;
+}
+.Content {
+  margin: auto ;
+  width: 50%;
+  height: 20%;
+  background-color: white;
+  padding-top: 2%;
+  text-align: center;
+}
+.NestedContent {
+  width: 30%;
+  display: inline-block;
+  margin-bottom: 4%;
+}
+.NestedContentImage {
+  width: 100%;
+}
+.slider {
+  margin: auto ;
+  width: 50%;
+  height: 20%;
+  background-color: white;
+}
+.dropbtn {
+  background-color: #00a1d1;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 25px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: white;
+  text-align: left;
+  padding-left: 10px;
+  display: block;
+  width: 100%;
+}
+.dropdown-content a:hover {
+  background-color: #008ab3;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: darkblue;
+}
+.drop-text {
+  font-family: Roboto-Regular;
+  font-size: 15px;
+  color: #ffffff;
+  letter-spacing: 0px;
+  line-height: 36px;
+  text-align: right;
+}
+.load-more {
+  background: #b0b0b0;
+  border-radius: 6px;
+  width: 25%;
+  height: 40px;
+  color: white;
+  border-width: 0px;
+}
+.kontakt {
+  margin-top: 100px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding-left: 3%;
+  padding-right: 3%;
+  width: 50%;
+  margin: auto;
+}
+.naslov-kontakt {
+  font-family: Roboto-Black;
+  color: #4a4a4a;
+  letter-spacing: 0px;
+}
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.footer-livo {
+  font-family: Roboto-Regular;
+  color: #ffffff;
+  float: right;
+}
+.footer-desno {
+  font-family: Roboto-Regular;
+  color: #ffffff;
+  float: left;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .slider {
+    background-color: white;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 641px) {
+  .slider {
+    background-color: green;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .slider {
+    background-color: blue;
+  }
+}

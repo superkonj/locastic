@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>locastic</title>
+    <link rel="stylesheet" href="style.css" >
+    <script src="jquerry.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+
+</style>
+</head>
+<body >
+    <div class="main">
+
+        <div class="nav-bar">
+
+            <div class="logo-livo">
+                <img src="slike/logo.png" alt="Logo">
+            </div>
+
+            <div class="linkovi-desno">
+                <a href="#home">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Work</button>
+                    <div class="dropdown-content">
+                        <p class="drop-text"> <a href="#">Manistra na pome</a></p>
+                        <p class="drop-text"> <a href="#">Biftek - medium rare+</a></p>
+                        <p class="drop-text"> <a href="#">Picigin 2016</a></p>
+                        <p class="drop-text"> <a href="#">Još jedan link eto tako</a></p>
+                    </div>
+                </div>
+                <a href="#about">About us</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="slider" >
+            <div class="w3-content w3-display-container" style="max-width:100%">
+                <img class="mySlides" src="slike\puppy.jpg" style="width:100%">
+                <img class="mySlides" src="slike\puppy2.jpg" style="width:100%">
+                <img class="mySlides" src="slike\puppy3.jpg" style="width:100%">
+                <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="Content" id="Content">
+		<div class="ContentPictures" id="ContentPictures">
+		
+            <div class="NestedContent" id ="NestedContent">
+                <img class="NestedContentImage" src="slike/artboard.png">
+            </div>
+		
+            <div class="NestedContent">
+                <img class="NestedContentImage" src="slike/artboard.png">
+            </div>
+            <div class="NestedContent">
+                <img class="NestedContentImage" src="slike/artboard.png">
+             </div>
+            <div class="NestedContent">
+                <img class="NestedContentImage" src="slike/artboard.png">
+             </div>
+            <div class="NestedContent">
+                <img class="NestedContentImage" src="slike/artboard.png">
+            </div>
+            <div class="NestedContent">
+                <img class="NestedContentImage" src="slike/artboard.png">
+            </div>
+
+</div>
+            <div>
+                <button class="load-more" id="LoadMore" >LoadMore</button>
+            </div>
+			
+
+            <div class="kontakt">
+
+                <h1 class="naslov-kontakt">Contact form</h1>
+
+                <form action="action_page.php">
+
+                    <label for="contactname">Contact name</label>
+                    <input type="text" id="contactname" name="firstname" placeholder="Contact name">
+
+                    <label for="email">Email adress</label>
+                    <input type="text" id="email" name="email" placeholder="email adress">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="message" style="height:200px"></textarea>
+
+                    <input type="submit" id="SubmitMessage" value="send message" >
+
+            </div>
+            <div class="footer">
+                <div class="footer-livo"><p>2016 Locastic Teest Page  </p></div>
+                <div class="footer-desno"><p>By Frontend Developer </p></div>
+            </div>
+        </div>
+
+    </body>
+    <script src="javascript.js"></script>
+<script>
+
+</script>
+</html>
