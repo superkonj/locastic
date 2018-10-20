@@ -1,5 +1,24 @@
-1. Kako bi pohranili autorizacijski token u vas�oj aplikaciji?
-3. Kako biste osigurali sigurnu vezu prema serveru u sluc�aju da promet ne ide preko HTTPS protokola? S�to biste promijenili u sluc�aju da koristite HTTPS vezu?
-4. Kako bi invalidirali token u sluc�aju isteka njegove valjanosti, a kako u sluc�aju odjave korisnika (logout)?
-5. Koje alternative predlaz�ete za osiguravanje autoriziranog pristupa API-ju osim autorizacijskim tokenom?
-6. Prokomentirajte potpisivanje API poziva autorizacijskim tokenom na sigurnoj i nesigurnoj vezi (odluc�ite se za jedan algoritam i tehniku "digitalnog potpisivanja" zahtjeva).
+1. Kako bi pohranili autorizacijski token u vašoj aplikaciji?
+Autorizacijski token se može pohraniti na dva načina.
+1. Lokalna pohrana. Glavni problem ovog načina je što je ranjiv na xss napade. 
+Lokalnoj pohrani se može pristupiti s bilo kojom java skriptom koja se nalazi na istoj domeni.
+Da bi se spriječili takvi napadi jedan od načina je "escaping" koji se koristi na način da se korisniku ne dozvoljava da upisuje specijalne znakove kao < > u polja.
+Ova metoda također ne koristi nikakve sigurnosti tijekom prijenosa podataka, tako da se obavezno mora koristiti https protokol.
+
+2.cookie 
+Kada se koriste cookie-i preko samo http-a, do njih se ne može doći korištenjem java scripta, prema tome su imuni na xss napade.
+Ali cookie su ranjivi na csrf napade. Da bi se zaštitili od takvih napada koriste se stp-"synchronized token patterns" koje podržavaju svi novi framework-ovi.
+Također se mogu koristiti neki sdk-ovi koji imaju ugrađenu zaštitu, kao Stormpath SDK za angular
+
+3. Kako biste osigurali sigurnu vezu prema serveru u slučaju da promet ne ide preko HTTPS protokola? Što biste promijenili u slučaju da koristite HTTPS vezu?
+U slučaju da veza ide preko http protokola treba dodatno enkriptirati podatke, najbolji način za to je dodavanje ssl certifikata koji kriptira podatke koji se šalju i primaju.
+U slučaju https-a dodatni ssl nije potreban jer ga on već sadrži.
+
+4. Kako bi invalidirali token u slučaju isteka njegove valjanosti, a kako u slučaju odjave korisnika (logout)?
+U slučaju isteka valjanosti napravio bih da validator vrati error i korisnika preusmjeri na login stranicu, a u slučaju odjave korisnika obrisao bih token korisnika kada se odjavi.
+
+5. Koje alternative predlažete za osiguravanje autoriziranog pristupa API-ju osim autorizacijskim tokenom?
+
+
+6. Prokomentirajte potpisivanje API poziva autorizacijskim tokenom na sigurnoj i nesigurnoj vezi (odlučite se za jedan algoritam i tehniku "digitalnog potpisivanja" zahtjeva).
+Razlika između sigurne i nesigurne veze u api 
