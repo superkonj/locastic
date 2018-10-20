@@ -39,11 +39,12 @@ $(document).ready(function(){
     $("#LoadMore").click(function(){
         $(".ContentPictures").append($(".ContentPictures").html());
     });
-	$("#submitId").submit(function(){
-		var requestGo=true;
+	
+	$("#SubmitMessage").click(function(){
+
+	 	var requestGo=true;
 	var contanctName=$("#contactname").val();
 	if(contanctName==""){
-		debugger
 		alert("No imput contactname");
 		requestGo=false;
 	}
@@ -53,6 +54,12 @@ $(document).ready(function(){
 		alert("No imput email");
 		requestGo=false;
 	}
+	else if(email.indexOf("@")== -1)
+	{
+		alert("No imput email contains @");
+		requestGo=false;
+	}
+	
 	
 	var message = $("#message").val();
 	if(message==""){
@@ -62,24 +69,48 @@ $(document).ready(function(){
 
 	
 	
-	if(requestGo==true)
-	{
-		debugger
-    var a = $.post("https://www.slicestic.com/api/v1/fe-dev",
-    {
-        name: "Donald Duck",
-        city: "Duckburg"
-    },
-    function(data, status){
-        alert("Data: " + data + "\nStatus: " + status);
+	 if(requestGo){
+					 var request = $.ajax({
+						  url: "https://www.slicestic.com/api/v1/fe-dev",
+						  type: "POST",
+						  dataType: "html"
+						});
+
+						request.done(function(msg) {
+						  alert( msg );
+						});
+
+						request.fail(function(jqXHR, textStatus) {
+						  alert( "Request failed: " + textStatus );
+						});
+	 
+
+		}
     });
-	console.log(a.fail);
-	}
-});
 	
-	
+  
 });
 
+
+function openNav() {
+    if ( $(window).width() > 641) {
+        console.log("tablet");
+        document.getElementById("mySidenav").style.width = "50%";
+
+    }
+    else {
+        document.getElementById("mySidenav").style.width = "100%";
+        console.log("mobile");
+    }
+    }
+
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+function showDivsubmenu() {
+    $( "#dropdownContentMobile" ).toggle();
+}
 
 
 

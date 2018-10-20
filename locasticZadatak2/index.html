@@ -9,14 +9,28 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<style>
-
-</style>
 </head>
 <body >
+
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#home">Home</a>
+    <div class="dropdown">
+        <a class="dropbtn"  onclick="showDivsubmenu()">Work</a>
+            <div id="dropdownContentMobile"style="display:none">
+                <p class="drop-text"> <a href="#">Manistra na pome</a></p>
+                <p class="drop-text"> <a href="#">Biftek - medium rare+</a></p>
+                <p class="drop-text"> <a href="#">Picigin 2016</a></p>
+                <p class="drop-text"> <a href="#">Još jedan link eto tako</a></p>
+            </div>
+
+    </div>
+    <a href="#about">About us</a>
+    <a href="#contact">Contact</a>
+</div>
     <div class="main">
 
         <div class="nav-bar">
@@ -28,7 +42,7 @@
             <div class="linkovi-desno">
                 <a href="#home">Home</a>
                 <div class="dropdown">
-                    <button class="dropbtn">Work</button>
+                    <a class="dropbtn">Work</a>
                     <div class="dropdown-content">
                         <p class="drop-text"> <a href="#">Manistra na pome</a></p>
                         <p class="drop-text"> <a href="#">Biftek - medium rare+</a></p>
@@ -39,8 +53,12 @@
                 <a href="#about">About us</a>
                 <a href="#contact">Contact</a>
             </div>
+            <div class="toggle">
+            <span style="font-size:30px;cursor:pointer" id="toggle-mob"for="toggle" onclick="openNav()">&#9776;</span>
 
         </div>
+        </div>
+
 
         <div class="slider" >
             <div class="w3-content w3-display-container" style="max-width:100%">
@@ -80,7 +98,7 @@
                 <img class="NestedContentImage" src="slike/artboard.png">
             </div>
 
-</div>
+        </div>
             <div>
                 <button class="load-more" id="LoadMore" >LoadMore</button>
             </div>
@@ -88,31 +106,29 @@
 
             <div class="kontakt">
 
-                <h1 class="naslov-kontakt">Contact form</h1>
+                <h1 class="naslov-kontakt">Contact Form</h1>
 
-                <form action="#" method="post" id='submitId'>
+                <form action="#">
 
                     <label for="contactname">Contact name</label>
-                    <input type="text" id="contactname" name="firstname" placeholder="Contact name">
+                    <input type="text" id="contactname" name="firstname">
 
                     <label for="email">Email adress</label>
-                    <input type="text" id="email" name="email" placeholder="email adress">
+                    <input type="text" id="email" name="email" >
 
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="message" style="height:200px"></textarea>
+                    <textarea id="message" name="message" ></textarea>
 
-                     <input type="submit" id="SubmitMessage" value="SubmitMessage">
+                    <input type="submit" id="SubmitMessage" value="Send Message" >
 				</form>
             </div>
             <div class="footer">
                 <div class="footer-livo"><p>2016 Locastic Teest Page  </p></div>
-                <div class="footer-desno"><p>By Frontend Developer </p></div>
+                <div class="footer-desno"><p>By Frontend Developer Antonio Bačić </p></div>
             </div>
         </div>
-
+    </div>
     </body>
     <script src="javascript.js"></script>
-<script>
 
-</script>
 </html>

@@ -8,20 +8,31 @@ a:link{
 a:visited {
   color: white;
 }
-
+p{
+  font-size: 12pt;
+}
+.main {
+width: 50% ;
+margin: auto ;
+}
 body{
 
   background-color: @boja_pozadina;
   margin-top: 0px;
 
 }
-
+textarea{
+  height:200px;
+  font-size: 1.4vw !important;
+}
+input[type=text]{
+  font-size: 1.4vw;
+}
 .nav-bar{
 
-  width:50%;
   height:75px;
   background-color: #00a1d1;
-  margin: auto;
+
   padding-left: 2%;
   padding-top: 1%;
   padding-right: 2%;
@@ -32,12 +43,15 @@ body{
 }
 
 .linkovi-desno{
+  a{
+    font-size:1vw;
+  }
   float: right;
   font-family:Roboto-Regular;
   font-size:22px;
   color:#ffffff;
   letter-spacing:0px;
-
+  font-size: 15px;
 }
 
 .mySlides {display:none}
@@ -45,8 +59,6 @@ body{
 .w3-badge {height:13px;width:13px;padding:0}
 
 .Content{
-  margin: auto ;
-  width: 50%;
   height: 20%;
   background-color: white;
   padding-top: 2%;
@@ -61,14 +73,11 @@ body{
   width: 100%;
 }
 .slider{
-  margin: auto ;
-  width: 50%;
   height: 20%;
-  background-color: white;
+  background-color: #00a1d1;
 }
 
 .dropbtn {
-  background-color: #00a1d1;
   color: white;
   border: none;
   cursor: pointer;
@@ -81,14 +90,30 @@ body{
   margin-right: 25px;
 }
 
-
-.dropdown-content {
+.dropdown-content-mob {
   display: none;
-  position: absolute;
   background-color: #333333;
-  min-width: 160px;
+  min-width: 250px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  width: 50%;
+  margin: auto;
+
+}
+.dropdown-content-mob a:hover {background-color: #008ab3}
+
+.dropdown:hover .dropdown-content-mob {
+  display: block;
+}
+.dropdown-content {
+
+  margin-left: -125% !important;
+}
+.dropdown-content {
+
+  .dropdown-content-mob;
+  position: absolute;
+
 }
 
 
@@ -101,6 +126,7 @@ body{
 }
 
 
+
 .dropdown-content a:hover {background-color: #008ab3}
 
 
@@ -110,7 +136,6 @@ body{
 
 
 .dropdown:hover .dropbtn {
-  background-color: darkblue;
 }
 
 .drop-text{
@@ -119,19 +144,20 @@ body{
   color:#ffffff;
   letter-spacing:0px;
   line-height:36px;
-  text-align:right;
+  text-align:left;
 }
+
+
 
 .load-more{
   background:#b0b0b0;
   border-radius:6px;
-  width:25%;
-  height:40px;
   color:white;
   border-width:0px;
 }
 
 .kontakt{
+  text-align: left;
   margin-top: 100px;
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -139,17 +165,22 @@ body{
   padding-right: 3%;  
   width: 50%;
   margin: auto;
+  font-size: 40%;
 }
 
 .naslov-kontakt{
-
+  text-align: center;
   font-family:Roboto-Black;
   color:#4a4a4a;
   letter-spacing:0px;
+  font-weight: bold;
+  font-size: 2.5vw;
+  font-family: sans-serif;
 }
 
-input[type=text], select, textarea {
+input[type=text], select, textarea ,input[type=submit]{
   width: 100%;
+  font-size: 1.4vw;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -172,35 +203,272 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
+
 .footer-livo{
   font-family:Roboto-Regular;
   color:#ffffff;
   float: right;
+  font-size: 40%;
 }
 
 .footer-desno{
   font-family:Roboto-Regular;
   color:#ffffff;
   float: left;
+  font-size: 40%;
+}
+
+
+.mob-nav{
+  text-align: center;
+  display: grid;
+}
+
+.toggle{
+  margin: auto;
+  width: 50%;
+}
+#toggle-mob{
+  float: right;
+  cursor: pointer;
+  color: white;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.sidenav a {
+  text-align: center;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: deepskyblue;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#SubmitMessage{
+  background-color: #00a1d1;
+  font-size: 1vw;
+}
+
+input[type=text], select, textarea{
+  border: hidden;
+}
+label{
+  font-size: 1vw;
+}
+.load-more {
+  width: 30%;
+  height: 3vw;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
 @media only screen and (min-width: 769px)and(max-width: 1024px){
-  .slider{
-    background-color: white;
+
+  #toggle{
+    display: none;
+  }
+  .mob-nav{
+    display: none;
+  }
+  .toggle{
+    display: none;
+  }
+  label{
+    font-size: 2vw;
   }
 
 }
 @media only screen and (max-width: 768px) and  (min-width: 641px){
-  .slider{
-    background-color: green;
+  .load-more {
+    width: 40%;
+    height: 7vw;
+  }
+  .main{
+    width: 100% !important;
+    margin: 0%;
+  }
+  .linkovi-desno{
+    display: none;
+    padding-top: 3%;
+  }
+  #toggle{
+    display: none;
+  }
+  .toggle{
+    float: right;
+  }
+  .NestedContent{
+    width: 49%;
+  }
+  #SubmitMessage{
+    font-size: 5vw;
+    background-color: #00a1d1;
+  }
+  .kontakt{
+    width: 70%;
+    margin: auto !important;
+    text-align: left;
+    font-size: 4vw;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .footer-livo{
+    padding-right: 4%;
+  }
+  .footer-desno{
+    padding-left: 4%;
+  }
+  input[type=text], select, textarea{
+    border: hidden;
+    font-size: 3vw !important;
+  }
+  .naslov-kontakt{
+    font-weight: 600;
+    font-size: 6.5vw;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  label{
+    font-size: 4vw;
   }
 
 }
 @media only screen and (max-width: 640px) {
-  .slider{
-    background-color: blue;
+  label{
+    font-size: 4vw;
+  }
+  #SubmitMessage{
+    font-size: 5vw;
+    background-color: #00a1d1;
+  }
+   .kontakt{
+     width: 100%;
+     text-align: left;
+     font-size: 5vw;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+     margin: 0%;
+   }
+
+  input[type=text], select, textarea{
+    border: hidden;
+    font-size: 4vw !important;
+  }
+  .naslov-kontakt{
+    font-weight: 900;
+    font-size: 12.5vw;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .NestedContent {
+    width: 100%;
+  }
+
+  .footer-desno{
+    float:  left !important;
+    width: 100%;
+
+  }
+  .footer-livo{
+    height: 25px;
+    width: 100%;
+  }
+  .load-more {
+    width: 95%;
+    height: 13vw;
+  }
+
+  .dropbtn {
+    background-color: #00a1d1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10vw 1vw;
+  }
+
+  .main {
+    width: 100% !important;
+    margin: auto !important;
+  }
+
+  .toggle {
+    margin-top: -6%;
+    float: right;
+  }
+
+  #toggle {
+    visibility: hidden;
+    margin-top: -6%;
+  }
+
+  #toggle-mob {
+
+    margin-top: 12%;
+  }
+
+  .linkovi-desno {
+    display: none;
+  }
+
+  .mob-nav {
+    display: none;
+  }
+
+  #toggle:checked + .mob-nav {
+    display: grid;
+  }
+
+  .dropbtn {
+    background-color: unset;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: unset;
+  }
+
+  .sidenav a:hover{
+    color: #767676;
+  }
+
+}
+
+@media only screen and (min-width: 1025px){
+
+  .toggle{
+    display: none ;
+  }
+  .mob-nav{
+    display: none;
   }
 
 
+  #toggle{
+    display: none;
+  }
 }
+
 

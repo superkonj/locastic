@@ -39,14 +39,78 @@ $(document).ready(function(){
     $("#LoadMore").click(function(){
         $(".ContentPictures").append($(".ContentPictures").html());
     });
+	
 	$("#SubmitMessage").click(function(){
-        $.post( "www.slicestic.com/api/v1/fe-dev", function( data ) {
-		  $( ".result" ).html( data );
-		});
+
+	 	var requestGo=true;
+	var contanctName=$("#contactname").val();
+	if(contanctName==""){
+		alert("No imput contactname");
+		requestGo=false;
+	}
+		
+	var email = $("#email").val();
+	if(email==""){
+		alert("No imput email");
+		requestGo=false;
+	}
+	else if(email.indexOf("@")== -1)
+	{
+		alert("No imput email contains @");
+		requestGo=false;
+	}
+	
+	
+	var message = $("#message").val();
+	if(message==""){
+		alert("No imput message");
+		requestGo=false;
+	}
+
+	
+	
+	 if(requestGo){
+					 var request = $.ajax({
+						  url: "https://www.slicestic.com/api/v1/fe-dev",
+						  type: "POST",
+						  dataType: "html"
+						});
+
+						request.done(function(msg) {
+						  alert( msg );
+						});
+
+						request.fail(function(jqXHR, textStatus) {
+						  alert( "Request failed: " + textStatus );
+						});
+	 
+
+		}
     });
 	
   
 });
+
+
+function openNav() {
+    if ( $(window).width() > 641) {
+        console.log("tablet");
+        document.getElementById("mySidenav").style.width = "50%";
+
+    }
+    else {
+        document.getElementById("mySidenav").style.width = "100%";
+        console.log("mobile");
+    }
+    }
+
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+function showDivsubmenu() {
+    $( "#dropdownContentMobile" ).toggle();
+}
 
 
 

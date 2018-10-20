@@ -1,0 +1,5 @@
+1. Kako bi pohranili autorizacijski token u vas¡oj aplikaciji?
+3. Kako biste osigurali sigurnu vezu prema serveru u sluc¡aju da promet ne ide preko HTTPS protokola? S¡to biste promijenili u sluc¡aju da koristite HTTPS vezu?
+4. Kako bi invalidirali token u sluc¡aju isteka njegove valjanosti, a kako u sluc¡aju odjave korisnika (logout)?
+5. Koje alternative predlaz¡ete za osiguravanje autoriziranog pristupa API-ju osim autorizacijskim tokenom?
+6. Prokomentirajte potpisivanje API poziva autorizacijskim tokenom na sigurnoj i nesigurnoj vezi (odluc¡ite se za jedan algoritam i tehniku "digitalnog potpisivanja" zahtjeva).
